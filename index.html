@@ -1,70 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
-     crossorigin="anonymous">
-
-     <!-- css -->
-     <link rel="stylesheet" href="style.css">
-    
-     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <script>
-        function comecar() {
-            let nivel = document.getElementById('nivel').value
-            if(nivel === ''){
-                alert('Selecione um nivel para jogar')
-                return false
-            }
-            window.location.href = "index.html?" + nivel 
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+  <script src="./main.js"></script>
 </head>
-<body>
 
-    <audio autoplay="autoplay" loop> 
-        <source src="/audio/inicio.mp3" type="audio/mp3"/>
-    </audio>
-    
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <div class="d-flex justify-content-center">
-                <img src="./img/star-wars-game-removebg-preview.png" alt="">
-            </div>
-        </div>
+<body onresize="ajusteAltura()">
+  <audio autoplay="autoplay" loop> 
+    <source src="/audio/luta.mp3" type="audio/mp3"/>
+</audio>
+  
+<div class="tela">
+    <div class="vidas">
+      <img id="p1" src="./img/coracao_cheio.png" alt="coração vazio" />
+      <img id="p2" src="./img/coracao_cheio.png" alt="coração cheio" />
+      <img id="p3" src="./img/coracao_cheio.png" alt="coração cheio" />
     </div>
 
-    <div class="row">
-        <div class="col">
-            <div class="d-flex justify-content-center">
-                <div class="mb-4">
-                <select class="form-control rounded text-black-50" id="nivel"> 
-                    <option value="">-- Niveis --</option>
-                    <option value="facil">Luke Skywalker</option>
-                    <option value="medio">Anakin Skywalker/ Darth Vade</option>
-                    <option value="dificil">Yoda</option>
-                </select>
-            </div>
-            </div>
-        </div>
+    <div class="temporizador">
+      Tempo restante: <span id="cronometro"></span>
     </div>
+  </div>
 
-    <div class="row">
-        <div class="col">
-            <div class="d-flex justify-content-center">
-                <button type="button" class=" btn btn-success btn-lg" onclick="comecar()" >
-                    Iniciar jogo
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
+
+  <script>
+    document.getElementById('cronometro').innerHTML = tempo
+
+    let criaDarth = setInterval(function () {
+      posicaoDartAleatorio()
+    }, tempoDarth)
+  </script>
 
 </body>
+
 </html>
