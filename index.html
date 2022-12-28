@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+  <script src="./main.js"></script>
+</head>
+
+<body onresize="ajusteAltura()">
+  <audio autoplay="autoplay" loop> 
+    <source src="/audio/luta.mp3" type="audio/mp3"/>
+</audio>
+  
+<div class="tela">
+    <div class="vidas">
+      <img id="p1" src="./img/coracao_cheio.png" alt="coração vazio" />
+      <img id="p2" src="./img/coracao_cheio.png" alt="coração cheio" />
+      <img id="p3" src="./img/coracao_cheio.png" alt="coração cheio" />
+    </div>
+
+    <div class="temporizador">
+      Tempo restante: <span id="cronometro"></span>
+    </div>
+  </div>
+
+
+  <script>
+    document.getElementById('cronometro').innerHTML = tempo
+
+    let criaDarth = setInterval(function () {
+      posicaoDartAleatorio()
+    }, tempoDarth)
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+html{
+     cursor: url(img/sabre.png) 40 40, default;
+}
+
+body{
+   
+    width: 100%;
+    height: 100vh;
+    background-image: url(./img/landscape-1033.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.darth1{
+    width: 60px;
+    height: 60px;
+}
+
+.darth2{
+    width: 80px;
+    height: 80px;
+}
+
+.darth3{
+    width: 100px;
+    height: 100px;
+}
+
+
+.face1{
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
+}
+
+
+.face2{
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+}
+
+.tela{
+    position: absolute;
+    width: 190px;
+    padding: 10px;
+    left: 0px;
+    bottom: 0px;
+    border-top: solid 1px #fff;
+    background-color: #fff;
+    opacity: 0.6;
+
+}
+.vidas{
+    float: left;
+}
+.temporizador{
+    float: left;
+    font-size:1.4rem ;
+    font-weight: bold;
+}
+
+.row .font{
+    font-size: 2.8rem;
+}
+
+
+
