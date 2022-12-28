@@ -59,7 +59,7 @@ function posicaoDartAleatorio() {
 
     }
 
-    let posicaoX = Math.floor(Math.random() * largura) - 0
+    let posicaoX = Math.floor(Math.random() * largura) - 100
     let posicaoy = Math.floor(Math.random() * altura) - 200
 
     posicaoX = posicaoX < 0 ? 0 : posicaoX
